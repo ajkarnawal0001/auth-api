@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const User = require('../model/user.model');
 const newToken = (user) => {
-  return jwt.sign({ user: user }, 'test12345');
+  return jwt.sign({ user: user }, process.env.JWT_SECRET_KEY);
 };
 
 const signup = async (req, res) => {

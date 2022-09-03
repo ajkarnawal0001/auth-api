@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     email:{type:String, required:true,unique:true},
     mobile:{type:String, required:true,minlength:10},
     password:{type:String, required:true,minlength:8},
-    roles:[{type:String, required:false,default:"user"}],
+    roles:[{type:String, required:true}],
     status:{type:Boolean, required:true,default:true}
 },{
     timestamps:true

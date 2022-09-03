@@ -1,5 +1,4 @@
-const authorise = (permittedRoles) = async function (req,res,next) {
-    
+const authorise = (permittedRoles) => async function (req,res,next) {
     const {user} = req.user
     const roles = user.roles
     const is_permitted = permittedRoles.filter(role => roles.includes(role));
